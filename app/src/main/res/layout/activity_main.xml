@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtIdMulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:hint="Id multa"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtIdMulta"
+        android:layout_alignStart="@+id/txtIdMulta"
+        android:layout_alignLeft="@+id/txtIdMulta"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="Fecha"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/txtIdMulta"
+        app:layout_constraintTop_toBottomOf="@+id/txtIdMulta" />
+
+    <EditText
+        android:id="@+id/txtPlacaMulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFecha"
+        android:layout_alignStart="@+id/txtFecha"
+        android:layout_alignLeft="@+id/txtFecha"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:hint="Placa"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/txtFecha"
+        app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
+
+    <EditText
+        android:id="@+id/txtCedulaMulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtValor"
+        android:layout_alignStart="@+id/txtValor"
+        android:layout_alignLeft="@+id/txtValor"
+        android:layout_marginTop="9dp"
+        android:ems="10"
+        android:hint="Cedula"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/txtValor"
+        app:layout_constraintTop_toBottomOf="@+id/txtValor" />
+
+    <EditText
+        android:id="@+id/txtValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEstado"
+        android:layout_alignStart="@+id/txtEstado"
+        android:layout_alignLeft="@+id/txtEstado"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/txtEstado"
+        app:layout_constraintTop_toBottomOf="@+id/txtEstado" />
+
+    <EditText
+        android:id="@+id/txtEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDescripcion"
+        android:layout_alignStart="@+id/txtDescripcion"
+        android:layout_alignLeft="@+id/txtDescripcion"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="Estado"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/txtDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion" />
+
+    <EditText
+        android:id="@+id/txtDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPlacaMulta"
+        android:layout_alignStart="@+id/txtPlacaMulta"
+        android:layout_alignLeft="@+id/txtPlacaMulta"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Descripcion"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/txtPlacaMulta"
+        app:layout_constraintTop_toBottomOf="@+id/txtPlacaMulta" />
+
+    <Button
+        android:id="@+id/btnConsultarMulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnEliminarMulta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="45dp"
+        android:text="Consultar"
+        app:layout_constraintBottom_toTopOf="@+id/btnEliminarMulta"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnInsertarMulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnConsultarMulta"
+        android:layout_alignBottom="@+id/btnConsultarMulta"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="38dp"
+        android:layout_toStartOf="@+id/btnConsultarMulta"
+        android:layout_toLeftOf="@+id/btnConsultarMulta"
+        android:text="Insertar"
+        app:layout_constraintBottom_toTopOf="@+id/btnModificarMulta"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnModificarMulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnInsertarMulta"
+        android:layout_alignBottom="@+id/btnInsertarMulta"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="42dp"
+        android:text="Modificar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEliminarMulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="42dp"
+        android:text="Eliminar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
